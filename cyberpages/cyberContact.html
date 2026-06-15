@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>Cyber Contact</title>
 		<link rel="stylesheet" href="../stylesheets/index.css">
+		<!-- https://forms.gle/9sivX1GJkBAkBceG8 -->
 	</head>
 
 	<body>
@@ -25,10 +26,54 @@
 					<h1 class="cyber-intro-title">
 						Contact Us About Cyber
 					</h1>
-					
-					<p class="cyber-intro-content">
+
+					<form id="cyber-contact-form">
 						
-					</p>
+						<div>
+							<label for="first-name">First Name:</label>
+							<input type="text" id="first-name" name="entry.680741528" required>
+						</div>
+						<div>
+							<label for="last-name">Last Name:</label>
+							<input type="text" id="last-name" name="entry.827147269" required>
+						</div>
+						<div>
+							<label for="e-mail">E-mail:</label>
+							<input type="email" id="e-mail" name="entry.1568768754" required>
+						</div>
+						<div>
+							<label for="phone">Phone Number:</label>
+							<input type="tel" id="phone" name="entry.2131087287">
+						</div>
+						<div>
+							<p class="org">What type of organization are you?</p>
+							<label>
+								<input type="radio" name="entry.2145183" value="Retirement Home" required>Retirement Home
+							</label><br>
+							<label>
+								<input type="radio" name="entry.2145183" value="Church">Church
+							</label><br>
+							<label>
+								<input type="radio" name="entry.2145183" value="High School">High School
+							</label><br>
+							<label>
+								<input type="radio" name="entry.2145183" value="Middle School">Middle School
+							</label><br>
+							<label>
+								<input type="radio" name="entry.2145183" value="Elementary School">Elementary School
+							</label>
+						</div>
+						<div>
+							<label for="message">Message:</label> <br>
+							<textarea id="message" name="entry.1103228302" rows="5" cols="20"></textarea>
+						</div>
+
+						<button type="submit">Submit</button>
+
+					</form>
+					<div id="successMessage" style="display:none; color: green; font-weight: bold;">
+    					Thank you! Your response has been recorded directly to our database.
+					</div>
 
 				</div>
 
@@ -37,6 +82,7 @@
 		</article>
 
 		<script src="../scripts/navbar.js"></script>
+		<script src="../scripts/cyberForm.js"></script>
 
 	</body>
 
