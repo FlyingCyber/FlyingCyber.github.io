@@ -207,3 +207,62 @@ body {
     font-size: 1.25em;
     margin-top: 0%;
 }
+
+#cyber-contact-form {
+    padding: 0vh 0vw 1.5vh 0vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.cyber-contact-form-element {
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+#cyber-submit {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    border-radius: 10px;
+    border: inset 2px black;
+    font-size: large;
+}
+
+#cyber-submit:hover {
+    font-weight: bolder;
+    border: outset 2px black;
+}
+
+#phish-form {
+    padding: 0vh 0vw 1.5vh 0vw;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+
+}
+
+.phish-form-element {
+    padding: 5px 0px;
+    font-size: 18px;
+}
+
+#phish-submit {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    border-radius: 10px;
+    border: inset 2px black;
+    font-size: large;
+    margin-top: 10px !important;
+}
+
+#phish-submit:hover {
+    font-weight: bolder;
+    border: outset 2px black;
+}
+
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
