@@ -253,12 +253,18 @@ body {
     border: inset 2px black;
     font-size: large;
     margin-top: 10px !important;
+    width: 45%;
 }
 
 .phish-form-button:hover {
     font-weight: bolder;
     border: outset 2px black;
     cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .phish-disclaimer {
