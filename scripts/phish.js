@@ -81,9 +81,11 @@ function closeModalResetForm() {
     modalOverlay.style.display = "none";
 
     form.reset();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
 }
 
-closeModal.addEventListener('click', closeModalResetForm());
+closeModal.addEventListener('click', closeModalResetForm);
 
 window.addEventListener('click', (event) => {
     if (event.target === modalOverlay) {
