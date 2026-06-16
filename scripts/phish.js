@@ -1,74 +1,88 @@
-// v0.1.6 2026-06-15
-function phishCalculator() {
+// v0.1.7 2026-06-15
+
+// define the scoring system for the phishing email calculator
+const scoringSystem = {
+    sender: { yes: 0, no: 3 },
+    urgency: { yes: 3, no: 0 },
+    money: { yes: 5, no: 0 },
+    download: { yes: 5, no: 0 },
+    cp: { yes: 5, no: 0 },
+    prosecution: { yes: 5, no: 0 },
+    payment: { giftcards: 15, crypto: 15, creditcard: 2, bank: 5, na: 0 },
+    power: { yes: 5, no: 0 },
+    number: { yes: 10, no: 0 }
+};
+
+// DOM elements 
+const submitBtn = document.getElementById('phish-submit');
+const modalOverlay = document.getElementById('phish-modal');
+const closeModal = document.getElementById('close-modal');
+const form = document.getElementById('phish-form');
+
+submitBtn.addEventListener('click', function () {
+
+    const formData = new FormData(form);
+    let totalScore = 0;
+    let questionsAnswered = 0;
 
     // get the values from the form elements
-    const sender = document.querySelector('input[name="sender"]:checked').value;
-    const know = document.querySelector('input[name="know"]:checked').value;
-    const urgency = document.querySelector('input[name="urgency"]:checked').value;
-    const money = document.querySelector('input[name="money"]:checked').value;
-    const download = document.querySelector('input[name="download"]:checked').value;
-    const cp = document.querySelector('input[name="cp"]:checked').value;
-    // const tone = document.querySelector('input[name="tone"]:checked').value;
-    const prosecution = document.querySelector('input[name="prosecution"]:checked').value;
-    const payment = document.querySelector('input[name="payment"]:checked').value;
-    const power = document.querySelector('input[name="power"]:checked').value;
-    const number = document.querySelector('input[name="number"]:checked').value;
-
-    // perform the logic
-    let result = "";
-    var tally = 0;
-    const y = "yes";
-    const n = "no";
-
-    if (sender==n) {
-        tally += 5;
-        console.log(tally);
-        if (know==y) {
-            tally += 5;
-            console.log(tally);
-            if (money==y) {
-                tally += 20;
-                console.log(tally);
-            }
-        }
-        if (urgency==y) {
-            tally += 15;
-            console.log(tally);
-        }
-        if (money==y) {
-            tally += 10;
-            console.log(tally);
-        }
-        if (download==y) {
-            tally += 10;
-            console.log(tally);
-        }
-        if (cp==y) {
-            tally += 30;
-            console.log(tally);
-        }
-        if (prosecution==y) {
-            tally += 20;
-            console.log(tally);
-        }
-        if (payment==y) {
-            tally += 30;
-            console.log(tally);
-        }
-        if (power==y) {
-            tally += 20;
-            console.log(tally);
-        }
-        if (number==y) {
-            tally += 50;
-            console.log(tally);
+    for (let [questionName, answeredValue] of formData.entries()) {
+        if (scoringSystem[questionName] && scoringSystem[questionName][answeredValue] !== undefined) {
+            totalScore += scoringSystem[questionName][answeredValue];
+            questionsAnswered++;
         }
     }
 
+    // check for answered questions
+    if (questionsAnswered === 0) {
+        alert("Please answer at least one question before analyzing.");
+        return;
+    }
 
-    // display the result
-    const resultDiv = document.getElementById('result');
-    resultDiv.style.display = 'flex'; 
-    resultDiv.innerHTML = tally;
+    // display results dynamically
+    displayResults(totalScore);
+});
+
+// display the modal 
+function displayResults(score) {
+
+    const title = document.getElementById('verdict-title');
+    const advice = document.getElementById('verdict-advice');
+
+    title.style.color = "";
+
+    if (score >= 15) {
+        title.innerText = "Severe Risk / Scam Very Likely";
+        title.style.color = "#dc3545";
+        advice.innerText = "This exhibits critical similarities with known scammer behavior. Stop all contact immediately and report as spam if possible."
+    }
+    else if (score >= 10) {
+        title.innerText = "High Risk / Scam Likely";
+        title.style.color = "#dc3545";
+        advice.innerText = "This exhibits critical similarities with known scammer behavior. Stop all contact immediately and report as spam if possible."
+    }
+    else if (score >= 5) {
+        title.innerText = "Moderate Risk / Suspicious";
+        title.style.color = "#ffc107";
+        advice.innerText = "This has some characteristics of known scammer behavior. Proceed with caution and verify all information through another trusted channel."
+    }
+    else {
+        title.innerText = "Low Risk";
+        title.style.color = "#28a745";
+        advice.innerText = "This does not match characteristics of known scammer behavior. If you are still unsure do not provide any personal information"
+    }
+
+    modalOverlay.style.display = "flex";
 
 }
+
+// close modal event
+closeModal.addEventListener('click', () => {
+    modalOverlay.style.display = "none";
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === modalOverlay) {
+        modalOverlay.style.display = "none";
+    }
+});
