@@ -1,4 +1,4 @@
-<!-- v0.1.7 2026-06-15 -->
+<!-- v0.1.8 2026-06-15 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,58 +27,90 @@
 						Am I Being Scammed?
 					</h1>
 
-					<!-- <h2>Still in development</h2> -->
+					<p class="phish-disclaimer">
+						The purpose of this tool is educational. Use the advice with caution. The scoring of each question leans more toward the risk of a scam than toward safety.
+					</p>
 
 					<form id="phish-form">
 						<div class="phish-form-element">
-							<p>Do you recognize the sender?</p>
+							<div class="phish-form-q-header">
+								<p>Do you recognize the sender?</p>
+								<button type="button" class="clear-q" data-clear="sender">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="sender">Yes
 							<input type="radio" value="no" name="sender">No
 						</div>
 						<div class="phish-form-element">
-							<p>Is there any urgency to do something?</p>
+							<div class="phish-form-q-header">
+								<p>Is there any urgency to do something?</p>
+								<button type="button" class="clear-q" data-clear="urgency">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="urgency">Yes
 							<input type="radio" value="no" name="urgency">No
 						</div>
 						<div class="phish-form-element">
-							<p>Are they asking for money?</p>
+							<div class="phish-form-q-header">
+								<p>Are they asking for money?</p>
+								<button type="button" class="clear-q" data-clear="money">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="money">Yes
 							<input type="radio" value="no" name="money">No
 						</div>
 						<div class="phish-form-element">
-							<p>Are they asking you to download something?</p>
+							<div class="phish-form-q-header">
+								<p>Are they asking you to download something?</p>
+								<button type="button" class="clear-q" data-clear="download">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="download">Yes
 							<input type="radio" value="no" name="download">No
 						</div>
 						<div class="phish-form-element">
-							<p>Are they asking you to copy and paste something?</p>
+							<div class="phish-form-q-header">
+								<p>Are they asking you to copy and paste something?</p>
+								<button type="button" class="clear-q" data-clear="cp">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="cp">Yes
 							<input type="radio" value="no" name="cp">No
 						</div>
 						<div class="phish-form-element">
-							<p>Is there a threat of prosecution?</p>
+							<div class="phish-form-q-header">
+								<p>Is there a threat of prosecution?</p>
+								<button type="button" class="clear-q" data-clear="prosecution">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="prosecution">Yes
 							<input type="radio" value="no" name="prosecution">No
 						</div>
 						<div class="phish-form-element">
-							<p>How are they asking to be paid?</p>
+							<div class="phish-form-q-header">
+								<p>How are they asking to be paid?</p>
+								<button type="button" class="clear-q" data-clear="payment">Clear Question</button>
+							</div>
 							<input type="radio" value="giftcards" name="payment">Gift Cards
 							<input type="radio" value="crypto" name="payment">Cryptocurrency
 							<input type="radio" value="creditcard" name="payment">Credit Card
 							<input type="radio" value="bank" name="payment">Bank Transfer
 						</div>
 						<div class="phish-form-element">
-							<p>Do they claim to be in a position of power</p>
+							<div class="phish-form-q-header">
+								<p>Do they claim to be in a position of power</p>
+								<button type="button" class="clear-q" data-clear="power">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="power">Yes
 							<input type="radio" value="no" name="power">No
 						</div>
 						<div class="phish-form-element">
-							<p>If it is a text message or phone call, is it a non US number? Contry code other than 1.</p>
+							<div class="phish-form-q-header">
+								<p>If it is a text message or phone call, is it a non US number? Contry code other than &plus;01.</p>
+								<button type="button" class="clear-q" data-clear="number">Clear Question</button>
+							</div>
 							<input type="radio" value="yes" name="number">Yes
 							<input type="radio" value="no" name="number">No
 						</div>
 
-						<button type="button" id="phish-submit" class="phish-form-element">Analyze Risk</button>
+						<div class="button-container">
+							<button type="button" id="phish-submit" class="phish-form-button">Analyze Risk</button>
+							<button class="phish-form-button" id="reset-btn" type="reset">Clear Questionaire</button>
+						</div>
 
 					</form>
 

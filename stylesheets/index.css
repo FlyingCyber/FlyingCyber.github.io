@@ -1,4 +1,4 @@
-/* v0.1.7 2026-06-15 */
+/* v0.1.8 2026-06-15 */
 
 /* site variables */
 :root {
@@ -239,15 +239,14 @@ body {
     display: flex;
     flex-direction: column;
     text-align: justify;
-
+    font-size: 20px;
 }
 
 .phish-form-element {
     padding: 5px 0px;
-    font-size: 18px;
 }
 
-#phish-submit {
+.phish-form-button {
     background-color: var(--bg-color);
     color: var(--fg-color);
     border-radius: 10px;
@@ -256,10 +255,15 @@ body {
     margin-top: 10px !important;
 }
 
-#phish-submit:hover {
+.phish-form-button:hover {
     font-weight: bolder;
     border: outset 2px black;
     cursor: pointer;
+}
+
+.phish-disclaimer {
+    padding: 0px 40px;
+    font-size: 20px;
 }
 
 .modal-overlay {
@@ -312,4 +316,29 @@ body {
 @keyframes fadeIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
+}
+
+.phish-form-q-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phish-form-q-header p {
+    width: 75%;
+}
+
+.clear-q {
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+    border-radius: 10px;
+    border: inset 2px black;
+    font-size: large;
+}
+
+.clear-q:hover {
+    font-weight: bolder;
+    border: outset 2px black;
+    cursor: pointer;
 }

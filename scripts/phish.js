@@ -1,4 +1,4 @@
-// v0.1.7 2026-06-15
+// v0.1.8 2026-06-15
 
 // define the scoring system for the phishing email calculator
 const scoringSystem = {
@@ -76,13 +76,44 @@ function displayResults(score) {
 
 }
 
-// close modal event
-closeModal.addEventListener('click', () => {
+// close modal and reset the form
+function closeModalResetForm() {
     modalOverlay.style.display = "none";
-});
+
+    form.reset();
+}
+
+closeModal.addEventListener('click', closeModalResetForm());
 
 window.addEventListener('click', (event) => {
     if (event.target === modalOverlay) {
-        modalOverlay.style.display = "none";
+        closeModalResetForm();
     }
+});
+
+// clear question button 
+const clearBtns = document.querySelectorAll('.clear-q');
+
+clearBtns.forEach(button => {
+    button.addEventListener('click', function () {
+        // get target name 
+        const targetName = this.getAttribute('data-clear');
+
+        // find the radio buttons
+        const radios = document.querySelectorAll(`input[name="${targetName}"]`);
+
+        // uncheck each radio button
+        radios.forEach(radio => {
+            radio.checked = false;
+        });
+    });
+});
+
+// clear questionaire button
+const resetBtn = document.getElementById('reset-btn');
+
+resetBtn.addEventListener('click', () => {
+    modalOverlay.style.display = "none";
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
