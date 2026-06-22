@@ -22,3 +22,6 @@
 
 ## v0.2.1 2026 06 22
 - Adjusted the content sizing for smaller screens
+
+## v0.2.2 2026 06 22
+- CSS fixes form mobile devices

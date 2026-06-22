@@ -1,4 +1,4 @@
-/* v0.2.1 2026 06 21 */
+/* v0.2.2 2026 06 22 */
 
 /* site variables */
 :root {
@@ -333,5 +333,9 @@ body {
     .content-container {
         padding: auto;
         margin: 0.5vh 0.125vw;
+    }
+
+    .content-title {
+        text-align: center;
     }
 }
