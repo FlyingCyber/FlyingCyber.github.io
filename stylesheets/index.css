@@ -1,4 +1,4 @@
-/* v0.2.2 2026 06 22 */
+/* v0.2.21 2026 06 22 */
 
 /* site variables */
 :root {
@@ -274,7 +274,7 @@ body {
 }
 
 /* media queries for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     body {
         padding: 10px;
         width: auto;
