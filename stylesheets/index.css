@@ -108,13 +108,9 @@ body {
   margin-top: 46px;
 }
 
-/* landing page css */
+/* pages css */
 
-.about {
-    margin: 5% 25% 0% 25%;
-}
-
-.about-container {
+.content-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,89 +119,14 @@ body {
     color: var(--bg-color);
     padding: 0vh 2vw;
     border-radius: 10px;
+    margin: 5% 25% 0% 25%;    
 }
 
-.about-title {
+.content-title {
     font-size: 36px;
 }
 
-.about-content {
-    font-size: 1.25em;
-    margin-top: 0%;
-}
-
-.mission {
-    margin: 5% 25% 0% 25%;
-}
-
-.mission-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--fg-color);
-    color: var(--bg-color);
-    padding: 0vh 2vw;
-    border-radius: 10px;
-}
-
-.mission-title {
-    font-size: 36px;
-}
-
-.mission-content {
-    font-size: 1.25em;
-    margin-top: 0%;
-}
-
-/* flying pages css */
-
-.flying-intro {
-    margin: 5% 25% 0% 25%;
-}
-
-.flying-intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--fg-color);
-    color: var(--bg-color);
-    padding: 0vh 2vw;
-    border-radius: 10px;
-}
-
-.flying-intro-title {
-    font-size: 36px;
-}
-
-.flying-intro-content {
-    font-size: 1.25em;
-    margin-top: 0%;
-}
-
-/* cyber pages css */
-
-.cyber-intro {
-    margin: 5% 25% 0% 25%;
-}
-
-.cyber-intro-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--fg-color);
-    color: var(--bg-color);
-    padding: 0vh 2vw;
-    border-radius: 10px;
-}
-
-.cyber-intro-title {
-    font-size: 36px;
-}
-
-.cyber-intro-content {
+.content {
     font-size: 1.25em;
     margin-top: 0%;
 }
@@ -214,6 +135,8 @@ body {
     padding: 0vh 0vw 1.5vh 0vw;
     display: flex;
     flex-direction: column;
+    text-align: left;
+    font-size: 20px;
 }
 
 .cyber-contact-form-element {
@@ -238,7 +161,7 @@ body {
     padding: 0vh 0vw 1.5vh 0vw;
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    text-align: left;
     font-size: 20px;
 }
 
@@ -265,6 +188,7 @@ body {
 .button-container {
     display: flex;
     justify-content: space-evenly;
+    padding: 10px 0px 20px 0px;
 }
 
 .phish-disclaimer {
@@ -347,4 +271,61 @@ body {
     font-weight: bolder;
     border: outset 2px black;
     cursor: pointer;
+}
+
+/* media queries for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .content-container {
+        padding: 20px 15px;
+    }
+
+    .phish-form-q-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .clear-q {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .phish-form-element label {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+
+    .phish-form-button {
+        width: auto;
+    }
+
+    .cyber-contact-form-element label {
+        flex-direction: column;
+        text-align: left;
+        padding: 10px 5px;
+        font-size: 1rem;
+    }
+
+    #cyber-contact-form {
+        width: 90%;
+    }
+
+    textarea {
+        height: 90px;
+        width: 90%;
+        padding: 8px;
+        font-size: 16px;
+    }
 }

@@ -10,7 +10,8 @@ const scoringSystem = {
     prosecution: { yes: 5, no: 0 },
     payment: { giftcards: 15, crypto: 15, creditcard: 2, bank: 5, na: 0 },
     power: { yes: 5, no: 0 },
-    number: { yes: 10, no: 0 }
+    number: { yes: 10, no: 0 },
+    free: { yes: 10, no: 0 },
 };
 
 // DOM elements 

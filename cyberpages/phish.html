@@ -4,6 +4,7 @@
 
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Am I Being Scammed?</title>
 		<link rel="stylesheet" href="../stylesheets/index.css">
 	</head>
@@ -19,11 +20,11 @@
 
 			</header>
 
-			<section class="cyber-intro">
+			<section class="section-content">
 
-				<div class="cyber-intro-container">
+				<div class="content-container">
 
-					<h1 class="cyber-intro-title">
+					<h1 class="content-title">
 						Am I Being Scammed?
 					</h1>
 
@@ -37,74 +38,82 @@
 								<p>Do you recognize the sender?</p>
 								<button type="button" class="clear-q" data-clear="sender">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="sender">Yes
-							<input type="radio" value="no" name="sender">No
+							<div class="answer"><input type="radio" value="yes" name="sender">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="sender">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Is there any urgency to do something?</p>
 								<button type="button" class="clear-q" data-clear="urgency">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="urgency">Yes
-							<input type="radio" value="no" name="urgency">No
+							<div class="answer"><input type="radio" value="yes" name="urgency">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="urgency">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Are they asking for money?</p>
 								<button type="button" class="clear-q" data-clear="money">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="money">Yes
-							<input type="radio" value="no" name="money">No
+							<div class="answer"><input type="radio" value="yes" name="money">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="money">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Are they asking you to download something?</p>
 								<button type="button" class="clear-q" data-clear="download">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="download">Yes
-							<input type="radio" value="no" name="download">No
+							<div class="answer"><input type="radio" value="yes" name="download">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="download">No</div>
+						</div>
+						<div class="phish-form-element">
+							<div class="phish-form-q-header">
+								<p>Are they offering you free stuff &lpar; i.e. in-game merch, cameras, concert tickets, sports tickets, computer, and etc. &rpar;?</p>
+								<button type="button" class="clear-q" data-clear="free">Clear Question</button>
+							</div>
+							<div class="answer"><input type="radio" value="yes" name="free">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="free">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Are they asking you to copy and paste something?</p>
 								<button type="button" class="clear-q" data-clear="cp">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="cp">Yes
-							<input type="radio" value="no" name="cp">No
+							<div class="answer"><input type="radio" value="yes" name="cp">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="cp">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Is there a threat of prosecution?</p>
 								<button type="button" class="clear-q" data-clear="prosecution">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="prosecution">Yes
-							<input type="radio" value="no" name="prosecution">No
+							<div class="answer"><input type="radio" value="yes" name="prosecution">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="prosecution">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>How are they asking to be paid?</p>
 								<button type="button" class="clear-q" data-clear="payment">Clear Question</button>
 							</div>
-							<input type="radio" value="giftcards" name="payment">Gift Cards
-							<input type="radio" value="crypto" name="payment">Cryptocurrency
-							<input type="radio" value="creditcard" name="payment">Credit Card
-							<input type="radio" value="bank" name="payment">Bank Transfer
+							<div class="answer"><input type="radio" value="giftcards" name="payment">Gift Cards</div>
+							<div class="answer"><input type="radio" value="crypto" name="payment">Cryptocurrency</div>
+							<div class="answer"><input type="radio" value="creditcard" name="payment">Credit Card</div>
+							<div class="answer"><input type="radio" value="bank" name="payment">Bank Transfer</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>Do they claim to be in a position of power</p>
 								<button type="button" class="clear-q" data-clear="power">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="power">Yes
-							<input type="radio" value="no" name="power">No
+							<div class="answer"><input type="radio" value="yes" name="power">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="power">No</div>
 						</div>
 						<div class="phish-form-element">
 							<div class="phish-form-q-header">
 								<p>If it is a text message or phone call, is it a non US number? Contry code other than &plus;01.</p>
 								<button type="button" class="clear-q" data-clear="number">Clear Question</button>
 							</div>
-							<input type="radio" value="yes" name="number">Yes
-							<input type="radio" value="no" name="number">No
+							<div class="answer"><input type="radio" value="yes" name="number">Yes</div>
+							<div class="answer"><input type="radio" value="no" name="number">No</div>
 						</div>
 
 						<div class="button-container">
