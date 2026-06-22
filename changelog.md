@@ -19,3 +19,6 @@
 - Added an additional question to Am I Being Scammed?
 - Simplified the CSS, made it more global
 - Added media queries for smaller screens to help with cell phone optimization
+
+## v0.2.1 2026 06 22
+- Adjusted the content sizing for smaller screens
