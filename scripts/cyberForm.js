@@ -1,4 +1,4 @@
-// v0.1.6 2026-06-15
+// v0.2.0 2026 06 21
 document.getElementById('cyber-contact-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Stop the page from reloading or redirecting
 
