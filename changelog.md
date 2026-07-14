@@ -26,7 +26,10 @@
 ## v0.2.2 2026 06 22
 - CSS fixes form mobile devices
 
-## v0.2.3 2026 07 08
+## v0.2.3 2026 07 13
 - Updated question on Am I Being Scammed?
 - Added best practices to the Cyber home page
 - Added a new logo to the navbar
+
+## v0.2.31 2026 07 13
+- Fixed path to logo

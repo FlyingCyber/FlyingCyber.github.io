@@ -1,4 +1,4 @@
-// v0.2.3 2026 07 13
+// v0.2.31 2026 07 13
 function createNavbar() {
 
     // Get the current Directory
@@ -8,6 +8,8 @@ function createNavbar() {
     // set the path prefix based on whether or not in a subdirectory
 
     let pathprefix = ''
+
+    
 
     if (currentDirectory.includes("cyberpages") || currentDirectory.includes("flyingpages")) {
         pathprefix = '../';
@@ -23,13 +25,14 @@ function createNavbar() {
     let mpfratPage = pathprefix + 'flyingpages/mpfrat.html';
     let spfratPage = pathprefix + 'flyingpages/spfrat.html';
     let flyingContactPage = pathprefix + 'flyingpages/flyingContact.html';
+    let logoPath = pathprefix + 'images/logo.png';
 
     // build navigation using path variables
 
     const navbarHTML = `
     <div class="navbar">
         <div class="title">
-            <a href="` + indexPage + `" id="title"><img src="/Users/Quinn/Documents/flyingcyber/images/logo.png" id="logo"></a>
+            <a href="` + indexPage + `" id="title"><img src="` + logoPath + `" id="logo"></a>
         </div>
         <div id="navbar">
         <div class="dropdown">
