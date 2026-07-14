@@ -1,4 +1,4 @@
-// v0.2.0 2026 06 21
+// v0.2.3 2026 07 13
 function createNavbar() {
 
     // Get the current Directory
@@ -29,7 +29,7 @@ function createNavbar() {
     const navbarHTML = `
     <div class="navbar">
         <div class="title">
-            <h1> <a href="` + indexPage + `" id="title">Flying Cyber</a></h1>
+            <a href="` + indexPage + `" id="title"><img src="/Users/Quinn/Documents/flyingcyber/images/logo.png" id="logo"></a>
         </div>
         <div id="navbar">
         <div class="dropdown">

@@ -1,8 +1,8 @@
-/* v0.2.21 2026 06 22 */
+/* v0.2.3 2026 07 13 */
 
 /* site variables */
 :root {
-    --bg-color: #3d413f;
+    --bg-color: #2F3334;
     --fg-color: #f5e9c1;
     --bg-hover: #333;
     --fg-hover: #fff;
@@ -12,7 +12,7 @@
 
 /* page  */
 body {
-    width: 100%;
+    width: auto;
     background-color: var(--bg-color);
 }
 
@@ -38,8 +38,9 @@ body {
     align-items: center;
 }
 
-#title {
-    font-size: 48px !important;
+#logo {
+    width: 200px;
+    height: auto;
 }
 
 /* Links inside the navbar */
