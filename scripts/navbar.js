@@ -1,4 +1,4 @@
-// v0.2.31 2026 07 13
+// v0.3.0 2026 08 07
 function createNavbar() {
 
     // Get the current Directory
@@ -20,6 +20,7 @@ function createNavbar() {
     let indexPage = pathprefix + 'index.html';
     let cyberPage = pathprefix + 'cyberpages/cyber.html';
     let phishPage = pathprefix + 'cyberpages/phish.html';
+    let ic3Page = pathprefix + 'cyberpages/ic3.html';
     let cyberContactPage = pathprefix + 'cyberpages/cyberContact.html';
     let flyingPage = pathprefix + 'flyingpages/flying.html';
     let mpfratPage = pathprefix + 'flyingpages/mpfrat.html';
@@ -47,6 +48,7 @@ function createNavbar() {
             <a href="` + cyberPage + `" class="dropbtn">Cyber</a>
             <div class="dropdown-content">
                 <a href="` + phishPage + `">Am I Being Scammed?</a>
+                <a href="` + ic3Page + `">IC3 Annual Reports</a>
                 <a href="` + cyberContactPage + `">Contact</a>
             </div>
         </div>

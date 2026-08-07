@@ -1,4 +1,4 @@
-/* v0.2.3 2026 07 13 */
+/* v0.3.0 2026 08 07 */
 
 /* site variables */
 :root {
@@ -272,6 +272,67 @@ body {
     font-weight: bolder;
     border: outset 2px black;
     cursor: pointer;
+}
+
+/* responsive scroll container */
+.table-scroll-container {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    border: 1px solid var(--bg-color);
+    border-radius: 8px;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ic3-data-table #table-head, #table-body {
+    white-space: nowrap !important;
+}
+
+.ic3-data-table th, .ic3-data-table td {
+    white-space: nowrap !important;
+    vertical-align: middle;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--bg-color);
+    border-right: 1px solid var(--bg-color);
+    color: var(--bg-color)
+}
+
+.ic3-data-table th {
+    color: var(--bg-color);
+    font-weight: 600;
+    white-space: nowrap !important; 
+}
+
+/* freeze 1st column */
+.ic3-data-table th:first-child, .ic3-data-table td:first-child, .ic3-data-table tr > th:nth-child(1), tr > td:nth-child(1) {
+    position: sticky !important;
+    position: -webkit-sticky !important;
+    background-color: var(--fg-color) !important;
+    left: 0 !important;
+    top: 0 !important;
+    z-index: 10 !important;
+}
+
+.ic3-data-table tbody td:nth-child(1), .ic3-data-table tbody tr > td:nth-child(1) {
+    z-index: 20 !important;
+    background-color: var(--fg-hover);
+}
+
+.ic3-data-table thead th:first-child, .ic3-data-table thead tr > td:nth-child(1) {
+    z-index: 30 !important;
+    background-color: var(--fg-color) !important; 
+}
+
+.ic3-data-table tbody tr:hover td:first-child {
+    background-color: var(--fg-color);
+}
+
+.ic3-data-table, .ic3-data-table tr, .ic3-data-table td, .ic3-data-table th {
+    white-space: nowrap !important;
 }
 
 /* media queries for smaller screens */

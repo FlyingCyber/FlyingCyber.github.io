@@ -1,0 +1,142 @@
+<!-- v0.3.0 2026 08 07 -->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>IC3 Fraud Data</title>
+		<link rel="stylesheet" href="../stylesheets/index.css">
+	</head>
+
+	<body>
+		<article id="page">
+			<header>
+
+				<div class="container">
+					<div id="navbar"></div>
+				</div>
+
+			</header>
+
+			<section class="section-content">
+
+				<div class="content-container">
+
+					<h1 class="content-title">
+						IC3 Fraud Data 2020 - 2025
+					</h1>
+					
+					<p class="content">
+                        This is a compilation of the last five years of the IC3 Annual Report. Some of the data is only from 2025 or 2024 (inaguaral year(s) for some of the data released). The totals in the tables displayed may not reflect the totals released by the IC3 for total complaints and/or loss for a given year, crime type, or age group because the IC3 does not require people to provide an age or crime type when they submit a claim.
+					</p>
+
+				</div>
+
+			</section>
+
+			<section class="section-content" id="ic3">
+
+				<div class="content-container">
+                    <h1 class="content-title">
+                        The Data
+                    </h1>
+                
+                    <div class="form">
+                    
+                        <form class="ic3 content" id="ic3">
+                            <div class="ic3-form-group">
+                                <label for="primary-select">Category:</label>
+                                <select name="category" id="primary-select">
+                                    <option value="">-- Select an Option --</option>
+                                    <option value="all">Annual Reports</option>
+                                    <option value="subReports">Sub Reports</option>
+                                    <option value="special">Special Reports</option>
+                                </select>
+                            </div>
+                    
+                            <div class="ic3-form-group">
+                                <label for="child-select">Dataset:</label>
+                                <select id="child-select" disabled>
+                                    <option value="">-- Select Category First --</option>
+                                </select>
+                            </div>
+                    
+                            <div class="ic3-form-group">
+                                <label for="year-select">Year:</label>
+                                <select id="year-select" disabled>
+                                    <option value="">All Years</option>
+                                </select>
+                            </div>
+                    
+                            <div class="ic3-form-group">
+                                <label for="age-select">Age Range:</label>
+                                <select id="age-select" disabled>
+                                    <option value="">All Ages:</option>
+                                    <option value="Under 20">Under 20</option>
+                                    <option value="20-29">20-29</option>
+                                    <option value="30-39">30-39</option>
+                                    <option value="40-49">40-49</option>
+                                    <option value="50-59">50-59</option>
+                                    <option value="60+">60+</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="directions">
+                        <h2>Directions:</h2>
+                        <p>Select a category for the report and then select the type of report to view. Some reports allow filtering by either year or age</p>
+                    
+                        <ul class="directions">
+                            <li>Annual Reports
+                                <ul>
+                                    <li>Elder Fraud Data 2020 - 2025</li>
+                                    <li>IC3 Annual Report 2020 - 2025</li>
+                                    <li>Victims by Age Group 2020 - 2025</li>
+                                </ul>
+                            </li>
+                            <li>Sub Reports
+                                <ul>
+                                    <li>AI References 2025</li>
+                                    <li>Crime Types by Age Group 2025</li>
+                                    <li>Cryptocurrency Fraud Report 2025</li>
+                                </ul>
+                            </li>
+                            <li>Special Reports
+                                <ul>
+                                    <li>17 and Younger Fraud Data 2025</li>
+                                    <li>Sextortion Data 2025</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="table-scroll-container">
+                        <table id="ic3-data-table">
+                            <thead id="table-head">
+                                <!-- elements dynamically added with JS -->
+                            </thead>
+                            <tbody id="table-body">
+                                <!-- elements dynamically added with JS -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination-nav">
+                        <button id="prev-page-btn" disabled>Previos</button>
+                        <span id="page-indicator">Page 1 of 1</span>
+                        <button id="next-page-btn" disabled>Next</button>
+                    </div>
+
+                </div>
+                
+			</section>
+
+		</article>
+
+		<script src="../scripts/navbar.js"></script>
+        <script src="../scripts/ic3.js"></script>
+
+	</body>
+
+</html>

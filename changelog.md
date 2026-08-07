@@ -33,3 +33,7 @@
 
 ## v0.2.31 2026 07 13
 - Fixed path to logo
+
+## v0.3.0 2026 08 07
+- Added IC3 Annual Report Data page
+- Sort and filter feautures to the IC3 data
